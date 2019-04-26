@@ -1,0 +1,24 @@
+<form method="POST" action="/subject/category">
+    <div class="selectBox" onclick="showCheckboxes()">
+        <select name="category">
+            {{#each subject}}
+            <option>{{this}}</option>
+            {{/each}}
+        </select>
+        <div class="overSelect"></div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{{#if predmet }} 
+<form method="POST" action="/subject/category/items">
+    <div class="selectBox" onclick="showCheckboxes()">
+        <select name="subject">
+            {{#each predmet}}
+            <option>{{name}}</option>
+            {{/each}}
+        </select>
+        <div class="overSelect"></div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{{/if}}

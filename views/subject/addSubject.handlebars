@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card card-body">
+            <h3 class="text-center">Subject add</h3>
+            <form method="POST" action="/subject/add">
+                <div class="form-group">
+                    <label for="email">Name </label>
+                    <input type="text" class="form-control" name="name" required>
+
+                </div>
+                {{!-- <div class="form-group"> 
+                    <label for="category">Category for just meeeee</label>
+                    <input type="text" class="form-control" name="category" required>
+
+                </div> --}}
+
+                <div class="selectBox" onclick="showCheckboxes()">
+                    <select name="category">
+                        {{#each subject}}
+                        <option>{{this}}</option>
+                        {{/each}}
+                    </select>
+                    <div class="overSelect"></div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

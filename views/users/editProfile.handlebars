@@ -1,0 +1,38 @@
+{{#user}}
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card card-body">
+            <h3 class="text-center">Edit Profile</h3>
+            <form method="POST" action="/users/profile/edit" enctype="multipart/form-data">
+            
+                <div class="form-group">
+                    <label for="userName">User name</label>
+                    <input type="text" class="form-control" name="userName" value="{{userName}}" readonly>
+
+                </div>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" name="firstName" value="{{firstName}}" >
+
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" name="lastName" value="{{lastName}}" readonly>
+
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" value="{{email}}" readonly>
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Post Image</label>
+                    <input type="file" class="form-control-file" id="userImage" name="userImage">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+{{/user}}

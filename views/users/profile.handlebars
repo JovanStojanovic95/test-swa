@@ -1,0 +1,16 @@
+{{#user}}
+    <div class="card card-body" style="width: 48rem;">
+        <img src={{userImage}} class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">My Profile</h5>
+            <h2>{{firstName}} {{lastName}}</h2>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <h3>My Subjects</h3>
+            {{#subject}}
+                <h2>{{name}}</h2>
+            {{/subject}}
+            <a href="/users/profile/edit" class="btn btn-primary">Edit profile</a>
+        </div>
+    </div>
+{{/user}}
